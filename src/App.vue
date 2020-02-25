@@ -7,12 +7,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Hello from './components/Hello.vue';
 
 export default defineComponent({
   name: "App",
   components: {
-    Hello
+    Hello: () => import('./components/Hello.vue') as any
   }
 });
 </script>
